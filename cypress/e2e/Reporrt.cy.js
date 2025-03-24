@@ -2,7 +2,7 @@
 
 import 'cypress-xpath';
 
-describe.only('Polaris Bid', () => {
+describe.only('Polaris Report', () => {
     beforeEach(() => {
       cy.viewport(1280, 720);
       cy.visit('https://space.jainam.in/#/?app=Polaris&returnUrl=');
@@ -21,9 +21,19 @@ describe.only('Polaris Bid', () => {
       cy.xpath("//input[@id='pin4']").type("7");
     });
   
-    it('should navigate to the IBO Explore page', () => {
-      // 2. IBO Explore
-      cy.xpath("//a[normalize-space()='Explore IBO']").should('be.visible').click();
-      
+    
+      it('IBO Explore - Navigate to Explore Page', () => {
+        cy.xpath("//a[normalize-space()='Explore IBO']").should('be.visible').click();
+      });
+    
+      it('IBO Bidding Page - Access Bidding Section', () => {
+        cy.xpath("//ul/li/a[text()='IBO']").should('be.visible').click();
+        cy.wait(3000);
+        cy.xpath("(//a[@title='Apply'][normalize-space()='Apply'])[1]", { timeout: 5000 }).should('be.visible').click();
+      });
+    
+      it('Bid Submit - Submit a Bid Successfully', () => {
+        cy.xpath("//label[@for='fruit1']").click();
+        cy.xpath("//button[normalize-space()='Submit']").click();
+      });
     });
-});
