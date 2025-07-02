@@ -7,9 +7,9 @@ export const login = () => {
     cy.wait(2000);
 
   // Login page
-  cy.xpath("//input[@placeholder='Enter User Id / Mobile Number']").type("1056");
+  cy.xpath("//input[@placeholder='Enter User Id / Mobile Number']").type("1126");
   cy.xpath("//button[normalize-space()='Continue']").click();
-  cy.xpath("//input[@placeholder='Enter Password']").type("Nifty@38000");
+  cy.xpath("//input[@placeholder='Enter Password']").type("J@inam$789");
   cy.xpath("//button[normalize-space()='Continue']").click();
 
   // Enter OTP
