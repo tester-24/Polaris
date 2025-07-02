@@ -2,7 +2,7 @@
 
 import 'cypress-xpath';
 
-describe.only('template spec', () => {
+describe.only('IBO BID', () => {
   it('passes', () => {
     cy.viewport(1280, 720);
     cy.wait(2000);
