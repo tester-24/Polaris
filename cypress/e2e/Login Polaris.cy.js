@@ -13,10 +13,10 @@ export const login = () => {
   cy.xpath("//button[normalize-space()='Continue']").click();
 
   // Enter OTP
-  cy.xpath("//input[@id='pin1']").type("1");
-  cy.xpath("//input[@id='pin2']").type("2");
-  cy.xpath("//input[@id='pin3']").type("3");
-  cy.xpath("//input[@id='pin4']").type("4");
+  cy.xpath("//input[@id='pin1']").type("8");
+  cy.xpath("//input[@id='pin2']").type("5");
+  cy.xpath("//input[@id='pin3']").type("2");
+  cy.xpath("//input[@id='pin4']").type("0");
   cy.wait(5000);
 
     // 2. Search Client
@@ -24,3 +24,4 @@ export const login = () => {
     cy.xpath('//div[@class="search-broker-icon"]').click();
 
 };
+
